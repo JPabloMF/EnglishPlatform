@@ -1,0 +1,140 @@
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+}
+
+:root{
+    --black: black;
+    --grey: grey;
+    --white: white;
+    --red: red;
+    --lightred: lightcoral;
+    --lightgreen: lightgreen;
+    --green: green;
+    --blue: blue;
+    --yellow: yellow;
+    --orange: orange;
+    --blueblack: #2c3e50;
+    --greywhite: #ecf0f1;
+}
+
+body{
+    background-color: var(--grey);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+
+summary{
+    outline: none;
+    cursor: pointer;
+}
+
+.incorrect{
+    color: var(--lightred);
+}
+
+.correct{
+    color: var(--lightgreen);
+}
+
+/* table */
+.table__container{
+    width: 100%;
+    overflow-x: auto;
+}
+
+.table{
+    background-color: var(--white);
+    border: 1px solid var(--black);
+    border-collapse: collapse;
+}
+
+.table__header{
+    background-color: var(--blueblack);
+    color: var(--white);
+}
+
+.table__header tr td{
+    padding: 10px;
+}
+
+.table__body tr{
+    border: 1px solid var(--greywhite);
+}
+
+.table__body tr:hover,
+.table__body tr:focus{
+    background-color: var(--greywhite);
+}
+
+.table__body tr td{
+    padding: 10px;
+}
+
+/* main */
+.main__container{
+    padding: 10px;
+    margin: 10px;
+}
+
+.main__title{
+    margin: 20px 10px;
+}
+
+.main__button{
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: var(--orange);
+    text-decoration: none;
+}
+
+/* menu */
+.menu{
+    width: 350px;
+    background-color: var(--white);
+    list-style: none;
+    padding: 0;
+}
+
+.menu__listitem{
+    padding: 15px;
+    border: 1px solid var(--greywhite);
+}
+
+.menu__listitem__title{
+    text-decoration: none;
+    display: block;
+}
+
+/* detail */
+.details{
+    background-color: var(--white);
+    padding: 20px;
+    margin: 10px 0px;
+}
+
+.subdetail{
+    padding: 20px;
+    border: 1px solid var(--greywhite);
+}
+
+.subdetail:hover,
+.subdetail:focus{
+    background-color: var(--greywhite);
+}
+
+.subdetail:hover > summary,
+.subdetail:focus > summary{
+    color: var(--lightred);
+}
+
+details summary::-webkit-details-marker {
+    background-image: url(./logo.png);
+    color: transparent;
+}
+details[open] summary::-webkit-details-marker {
+    background-image: url(./logo.png);
+    color: transparent;
+}
